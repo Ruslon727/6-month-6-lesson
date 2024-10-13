@@ -1,8 +1,8 @@
 import React from 'react'
 
-function Button({title, type}) {
+function Button({children, type, extraStyle}) {
     return (
-        <button type={type} className={`w-[134px] mx-auto block py-[13px] button-style text-white font-normal leading-[15px] text-[10px] rounded-[100px] `}>{title}</button>
+        <button type={type} className={`w-[134px] duration-300 mx-auto block py-[13px] button-style text-white font-normal leading-[15px] text-[10px] rounded-[100px] ${extraStyle} `}>{children}</button>
     )
 }
 export default Button
