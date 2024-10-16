@@ -186,5 +186,16 @@ function MoreIcon() {
         </svg>
     )
 }
+function UploadImgIcon() {
+    return (
+        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 33.7813L16.4264 20.2832L29.9246 33.7813" stroke="white" strokeLinecap="round" strokeLinejoin="round" />
+            <path d="M8.71322 1H39.5661C43.8084 1 47.2793 4.47095 47.2793 8.71322V39.5661C47.2793 43.8084 43.8084 47.2793 39.5661 47.2793H8.71322C4.47095 47.2793 1 43.8084 1 39.5661V8.71322C1 4.47095 4.47095 1 8.71322 1Z" stroke="white" strokeLinecap="round" strokeLinejoin="round" />
+            <path d="M47.2791 33.7816L39.5659 26.0684L30.1172 33.9744" stroke="white" strokeLinecap="round" strokeLinejoin="round" />
+            <path d="M30.8891 22.2109C33.5516 22.2109 35.7099 20.0525 35.7099 17.3901C35.7099 14.7277 33.5516 12.5693 30.8891 12.5693C28.2267 12.5693 26.0684 14.7277 26.0684 17.3901C26.0684 20.0525 28.2267 22.2109 30.8891 22.2109Z" stroke="white" strokeLinecap="round" strokeLinejoin="round" />
+        </svg>
 
-export { SignInLogo, Bell, OverviewIcon, UsersIcon, AgentsIcon, CardsIcon, BitcoinEthereumIcon, PaymentsIcon, TransactionsIcon, StatisticsIcon, LogoutIcon, UserIcon, DeleteIcon, MoreIcon }
+    )
+}
+
+export { SignInLogo, Bell, UploadImgIcon, OverviewIcon, UsersIcon, AgentsIcon, CardsIcon, BitcoinEthereumIcon, PaymentsIcon, TransactionsIcon, StatisticsIcon, LogoutIcon, UserIcon, DeleteIcon, MoreIcon }

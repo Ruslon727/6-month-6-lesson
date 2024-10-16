@@ -73,7 +73,7 @@ function Navbar() {
   return (
     <div className='w-[20%] h-[100vh] pt-[44px] pr-[17px]   border-r-[2px] border-white overflow-y-auto'>
       {navbarList.map(item => (
-        <NavLink className={"flex items-center relative pl-[55px] py-[18px] rounded-r-[100px]  space-x-[21px]"} to={item.path}>
+        <NavLink key={item.id} className={"flex items-center relative pl-[55px] py-[18px] rounded-r-[100px]  space-x-[21px]"} to={item.path}>
           {item.icon}
           <span className='text-white text-[12px] leading-[18px] font-normal'>{item.title}</span>
           {item.notificationCount ?

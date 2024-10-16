@@ -34,3 +34,6 @@ body {
     background-size: 13px 13px;
     background-position: 27px center;
 }
+.active-pending{
+    background-image: linear-gradient(180deg, #FD749B, #281AC8);
+}
