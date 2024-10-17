@@ -2,10 +2,12 @@ import React, { useContext, useState } from 'react'
 import { DeleteIcon, MoreIcon } from '../assets/images/Image'
 import { Checkbox } from 'antd'
 import { Context } from '../context/Context'
+import { useNavigate } from 'react-router-dom'
 
-function AgentsItem({ item }) {
+function AgentsItem({ item, deleteBtnClick }) {
     const { agents, setAgents } = useContext(Context)
     const [isPending, setIsPending] = useState(false)
+    const navigate = useNavigate()
 
     function handleCheckBtn(e) {
         item.isChecked = !item.isChecked
@@ -17,9 +19,10 @@ function AgentsItem({ item }) {
         setTimeout(() => {
             setIsPending(false)
             item.status = !item.status
+            setAgents([...agents])
         }, 1000)
-        setAgents([...agents])
     }
+
     return (
         <tr className='border-[2px] border-white'>
             <td className='space-x-[15px] py-[19px] pl-5'>
@@ -32,8 +35,8 @@ function AgentsItem({ item }) {
             </td>
             <td className='text-center py-[19px] text-white text-[12px] leading-[20px]'>{item.useremail}</td>
             <td className='py-[19px] text-end space-x-5 pr-5'>
-                <button className='align-middle hover:scale-[1.4] duration-300'><DeleteIcon /></button>
-                <button className='align-middle hover:scale-[1.4] duration-300'><MoreIcon /></button>
+                <button onClick={() => deleteBtnClick(item.id)} className='align-middle hover:scale-[1.4] duration-300'><DeleteIcon /></button>
+                <button onClick={() => navigate(`${item.id}`)} className='align-middle hover:scale-[1.4] duration-300'><MoreIcon /></button>
             </td>
         </tr>
     )

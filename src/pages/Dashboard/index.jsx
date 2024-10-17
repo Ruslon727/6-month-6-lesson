@@ -7,6 +7,7 @@ import Payments from "./Payments";
 import Transactions from "./Transactions";
 import Statistics from "./Statistics";
 import AgentAdd from "./AgentAdd";
+import AgentMore from "./AgentMore";
 
 
-export {Overview, AgentAdd, Users, Agents, Cards, BitcoinEthereum, Payments, Transactions, Statistics}
+export {Overview, AgentMore, AgentAdd, Users, Agents, Cards, BitcoinEthereum, Payments, Transactions, Statistics}
